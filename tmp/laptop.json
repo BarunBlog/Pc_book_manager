@@ -1,0 +1,62 @@
+{
+  "id": "8701c113-087d-4234-8a07-27ec6c2914ab",
+  "brand": "Dell",
+  "name": "XPS",
+  "cpu": {
+    "brand": "AMD",
+    "name": "Ryzen 3 PRO 3200GE",
+    "number_cores": 8,
+    "number_threads": 10,
+    "min_ghz": 2.6629085055789155,
+    "max_ghz": 4.174762918292662
+  },
+  "ram": {
+    "value": 59,
+    "unit": "GIGABYTE"
+  },
+  "gpus": [
+    {
+      "brand": "NVIDIA",
+      "name": "RX 5700-XT",
+      "min_ghz": 1.4295302713305664,
+      "max_ghz": 1.4745616785874083,
+      "memory": {
+        "value": 5,
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "storages": [
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": 992,
+        "unit": "GIGABYTE"
+      }
+    },
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": 6,
+        "unit": "TERABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 14.926751,
+    "resolution": {
+      "width": 3020,
+      "height": 1699
+    },
+    "panel": "OLED",
+    "multitouch": false
+  },
+  "keyboard": {
+    "layout": "QUERTZ",
+    "backlist": false
+  },
+  "weight_kg": 2.583050867584257,
+  "price_usd": 2181.0985668610774,
+  "release_year": 2017,
+  "updated_at": "2022-10-13T17:57:43.224993600Z"
+}

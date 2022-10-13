@@ -2,10 +2,18 @@ package sample
 
 import (
 	"math/rand"
+	"time"
 
 	"github.com/BarunBlog/Pc_book_manager/pb"
 	"github.com/google/uuid"
 )
+
+// this function is called before any other function
+func init() {
+	// by default rand package uses fixed seed value
+	// we need to set seed for each object
+	rand.Seed(time.Now().UnixNano())
+}
 
 func randomKeyboardLayout() pb.Keyboard_Layout {
 	switch rand.Intn(3) {
