@@ -4,6 +4,7 @@ import (
 	"math/rand"
 
 	"github.com/BarunBlog/Pc_book_manager/pb"
+	"github.com/google/uuid"
 )
 
 func randomKeyboardLayout() pb.Keyboard_Layout {
@@ -57,6 +58,21 @@ func randomGPUName(brand string) string {
 	)
 }
 
+func randomLaptopBrand() string {
+	return randomStringFromSet("Apple", "Dell", "Lenovo")
+}
+
+func randomLaptopName(brand string) string {
+	switch brand {
+	case "Apple":
+		return randomStringFromSet("Macbook Air", "Macbook Pro")
+	case "Dell":
+		return randomStringFromSet("Latitude", "Vostro", "XPS", "Alienware")
+	default:
+		return randomStringFromSet("Thinkpad X1", "Thinkpad P1", "Thinkpad p53")
+	}
+}
+
 func randomGPUBrand() string {
 	return randomStringFromSet("NVIDIA", "AMD")
 }
@@ -79,4 +95,31 @@ func randomInt(min int, max int) int {
 
 func randomFloat64(min, max float64) float64 {
 	return min + rand.Float64()*(max-min)
+}
+
+func randomFloat32(min, max float32) float32 {
+	return min + rand.Float32()*(max-min)
+}
+
+func randomScreenResolution() *pb.Screen_Resolution {
+	height := randomInt(1080, 4320)
+	width := height * 16 / 9
+
+	resolution := &pb.Screen_Resolution{
+		Width:  uint32(width),
+		Height: uint32(height),
+	}
+
+	return resolution
+}
+
+func randomScreenPanel() pb.Screen_Panel {
+	if rand.Intn(2) == 1 {
+		return pb.Screen_IPS
+	}
+	return pb.Screen_OLED
+}
+
+func randomID() string {
+	return uuid.New().String()
 }
